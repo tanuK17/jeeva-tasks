@@ -1,3 +1,25 @@
+# File Processing:
+
+# If a PDF file is uploaded, it reads each page using PyPDF2 to extract text
+# If a text file is uploaded, it reads and decodes the text
+
+# -------
+
+# URL Handling:
+
+# Fetches the content from the URL
+# If the URL points to a PDF, it extracts text similarly to a PDF file
+# If it’s plain text or HTML, it retrieves the raw content
+
+# -------
+
+# Directly assigns the provided text to the content
+
+# To test end point:
+
+# Send a PDF or .txt file through the /process_input/ endpoint
+# URL or Plain Text: Use JSON with url or text fields
+
 from fastapi import FastAPI, UploadFile, Form
 from pydantic import BaseModel
 from typing import Union
